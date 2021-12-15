@@ -1,6 +1,8 @@
 package com.android.developer.words
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -51,6 +53,12 @@ class WordAdapter(private val letterID : String, context : Context) : RecyclerVi
         val context = holder.view.context
 
         holder.button.text = item
+        holder.button.setOnClickListener {
+            // Cria o formato da url usada para a pesquisa.
+            val queryUrl : Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}${item}")
+            val intent = Intent(Intent.ACTION_VIEW, queryUrl)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
