@@ -22,6 +22,6 @@ class DetailActivity : AppCompatActivity() {
 
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
-        title = getString(R.string.detail_prefix)
+        title = getString(R.string.detail_prefix) + " " + letterID
     }
 }
