@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Words</string>
+    <string name="detail_prefix">Words that start with</string>
 </resources>
