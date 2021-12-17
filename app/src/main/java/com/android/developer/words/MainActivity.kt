@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         chooseLayout()
     }
 
+    // Define o tipo de gerenciador de layout para a recyclerView
     private fun chooseLayout() {
-        // Define o tipo de gerenciador de layout para a recyclerView
         if (isLinearLayoutManager) {
             recyclerView.layoutManager = LinearLayoutManager(this)
         } else {
